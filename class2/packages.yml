@@ -1,0 +1,15 @@
+- hosts: all
+  tasks:
+  - name: install packages
+    yum:
+      name: “{{ packages }}”
+      state: present
+    vars:
+      packages:
+      - wget
+      - git
+      - httpd
+      - tree
+      - unzip
+
+   
